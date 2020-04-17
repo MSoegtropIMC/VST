@@ -7,7 +7,7 @@
    will tell you which versions are compatible.
 
 2. Make sure you have the right version of CompCert.
-   VST 2.0 uses CompCert 3.2 for Coq 8.7.1 (or Coq 8.7 should work).
+   This version uses CompCert 3.7 for Coq 8.11.
 
 ### METHOD A [recommended]
 
@@ -32,7 +32,6 @@ You may also use x86_64, but VST has not been as heavily tested in
 64-bit configurations.  You may also use other back ends besides x86,
 but VST has not been much tested on those.
 
-
 ### METHOD B [alternate]
 
 This method bases the VST on the same specification files
@@ -50,6 +49,7 @@ which uses verbatim copies of them).
 2. In the VST directory, create a file `CONFIGURE` containing exactly the text:  
    ```
    COMPCERT=../CompCert   # or whatever is your path to compcert
+   FLOCQ=flocq   # if your external CompCert wants to use its own internal flocq
    ```
 3. In the VST directory,  
    ```sh

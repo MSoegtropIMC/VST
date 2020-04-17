@@ -81,8 +81,8 @@ endif
 endif
 
 
-FLOCQ=       # this mode to use the flocq packaged with Coq or opam
-# FLOCQ=flocq  # this mode to use the flocq built into compcert
+FLOCQ?=       # this mode to use the flocq packaged with Coq or opam
+# FLOCQ?=flocq  # this mode to use the flocq built into compcert
 
 COMPCERTDIRS=lib common $(ARCHDIRS) cfrontend exportclight $(BACKEND) $(FLOCQ)
 
